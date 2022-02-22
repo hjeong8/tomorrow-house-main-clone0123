@@ -1,0 +1,95 @@
+.my-menu{
+    $button-size: 32px;
+    $tooltip-size: 12px;
+    position: relative;
+    
+    &.is-active{
+        .my-menu-button{
+            border-color: $blue;
+        }
+
+        .my-menu-content{
+            opacity: 1;
+            visibility: visible;
+            transform: translate3d(-50%, 0, 0); //-50%는 pos-center-x에 적용된 x축값을 그대로 적어줌. 안그럴경우 위치가 이상해짐
+        }
+    }
+
+    &-button{
+        width: $button-size;
+        height: $button-size;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid $white;
+        transition: border-color 200ms ease-in-out;
+
+        &:hover{
+            border-color: $blue;
+        }
+
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-content{
+        @include pos-center-x;
+        top: $button-size + $tooltip-size + 8px;
+        border-radius: 4px;
+        visibility: hidden;
+        opacity: 0;
+        box-shadow: $dropdown-shadow;
+        transform: translate3d(-50%, -10px, 0); //-50%는 pos-center-x에 적용된 x축값을 그대로 적어줌. 안그럴경우 위치가 이상해짐
+        transition:  visibility 200ms ease-in-out, transform 200ms ease-in-out, opacity 200ms ease-in-out; 
+
+        &::before,
+        &::after{
+            @include pos-center-x;
+            top: -#{$tooltip-size * 2};
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: $tooltip-size solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: $tooltip-size solid transparent;
+            border-left: 10px solid transparent;
+            content: "";
+        }
+        &::before{
+            border-bottom-color: $border;
+        }
+        
+        &::after{
+            top: -#{$tooltip-size * 2 - 2px};
+            border-bottom-color: $white;
+        }
+    
+    }
+
+    &-list{
+        width: 200px;
+        padding: 8px;
+        background-color: $white;
+        border-radius: 4px;
+        border: 1px solid $border;
+    }
+
+    &-item{
+        a,
+        button{
+            @include flexbox(start);
+            @include text-style(16px, $primary);
+            width: 100%;
+            height: 44px;
+            padding: 0 8px;
+            border-radius: 2px;
+
+            &:hover{
+                background-color: $background;                
+            }
+        }
+    }
+}
