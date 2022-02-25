@@ -1528,7 +1528,7 @@ i {
   bottom: 16px;
 }
 
-.product-carousel-thumbnail .thumbnail-list {
+.product-carousel .thumbnail-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1540,7 +1540,7 @@ i {
           justify-content: center;
 }
 
-.product-carousel-thumbnail .thumbnail-item {
+.product-carousel .thumbnail-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1553,13 +1553,13 @@ i {
   margin: 0 4px;
 }
 
-.product-carousel-thumbnail .thumbnail-item.tns-nav-active button {
+.product-carousel .thumbnail-item.tns-nav-active button {
   opacity: 1;
   -webkit-transform: scale(1.3333);
           transform: scale(1.3333);
 }
 
-.product-carousel-thumbnail .thumbnail-item button {
+.product-carousel .thumbnail-item button {
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -1571,7 +1571,7 @@ i {
   opacity: 0.7;
 }
 
-.product-carousel-thumbnail .thumbnail-item img {
+.product-carousel .thumbnail-item img {
   display: none;
 }
 
@@ -1579,6 +1579,58 @@ i {
   display: block;
   width: 100%;
   height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .product-carousel {
+    padding-right: 30px;
+  }
+  .product-carousel-slider {
+    margin: 0 0 8px 0;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .product-carousel-thumbnail {
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .product-carousel .thumbnail-list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .product-carousel .thumbnail-item {
+    margin: 0 8px 0 0;
+  }
+  .product-carousel .thumbnail-item:last-child {
+    margin-right: 0;
+  }
+  .product-carousel .thumbnail-item.tns-nav-active button {
+    border: 2px solid #3da5f5;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .product-carousel .thumbnail-item button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    overflow: hidden;
+    opacity: 1;
+  }
+  .product-carousel .thumbnail-item img {
+    display: block;
+    width: 56px;
+  }
 }
 
 .container {
