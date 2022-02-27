@@ -2,10 +2,24 @@
     margin-top: 20px;
     margin-bottom: 40px;
 
-    .order-inputs{
+    .order-inputs,
+    .order-checkouts,
+    .order-summary{
         margin-bottom: 20px;
+    }
 
+    .order-inputs{
         .select-group{
+            margin-bottom: 8px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .order-checkouts{
+        .checkout-item{
             margin-bottom: 8px;
 
             &:last-child{
@@ -16,7 +30,6 @@
 
     .order-summary{
         @include flexbox(between);
-        margin-bottom: 20px;
 
         dt{
             @include text-style(13, $dark);
