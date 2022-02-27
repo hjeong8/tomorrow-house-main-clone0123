@@ -1929,11 +1929,70 @@ i {
   .product-info-delivery {
     padding-top: 16px;
     padding-bottom: 20px;
-    border: 1px solid #e0e2e7;
+    border-bottom: 1px solid #e0e2e7;
   }
   .product-info-delivery span {
     margin-bottom: 8px;
   }
+}
+
+.order-form {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.order-form .order-inputs {
+  margin-bottom: 20px;
+}
+
+.order-form .order-inputs .select-group {
+  margin-bottom: 8px;
+}
+
+.order-form .order-inputs .select-group:last-child {
+  margin-bottom: 0;
+}
+
+.order-form .order-summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.order-form .order-summary dt {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: #191a20;
+  font-weight: 700;
+}
+
+.order-form .button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.order-form .button-group button {
+  width: 50%;
+  margin-right: 8px;
+}
+
+.order-form .button-group button:last-child {
+  margin-right: 0;
 }
 
 .container {
